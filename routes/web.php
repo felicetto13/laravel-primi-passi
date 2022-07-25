@@ -37,4 +37,11 @@ Route::get('/', function () {
     return view('home',["users"=>$users]);
 })->name("home");
 
+Route::get('chi-siamo', function (){
+return "<h1>Pagina di prova chi siamo</h1>";
+})->name("chi-siamo");
+
+Route::get('contacts', function (){
+    return "<h1>Pagina di prova CONTATTI</h1>";
+})->name("contacts");
 

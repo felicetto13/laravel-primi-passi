@@ -9,6 +9,15 @@
     
 </head>
 <body>
+    <header>
+        <nav>
+            <ul class="list-unstyled d-flex bg-secondary">
+                <li class="p-2 fs-3 text-primary "><a href="{{ route('home')}}">Home</a></li>
+                <li class="p-2 fs-3 text-primary "><a href="{{ route('chi-siamo')}}">Chi siamo</a></li>
+                <li class="p-2 fs-3 text-primary "><a href="{{ route('contacts')}}">Contatti</a></li>
+            </ul>
+        </nav>
+    </header>
     <div class="container py-5 text-center">
         <h1>Hello World!</h1>
         <h2><---  Utenti registrati  ---></h2>
