@@ -9,8 +9,20 @@
     
 </head>
 <body>
-    <div class="container">
+    <div class="container py-5 text-center">
         <h1>Hello World!</h1>
+        <h2><---  Utenti registrati  ---></h2>
+        <ul class="list-unstyled">
+        @forelse ($users as $user)
+        <li class="d-flex flex-column"><span>Utente <strong>{{$loop->iteration}}</strong>:</span>
+            <span>Nome Utente: {{$user["username"]}}</span>
+            <span>Password: {{$user["password"]}}</span>
+            <span>Ruolo: {{$user["role"]}}</span>
+        </li>
+        @empty
+            <li>Non ci sono utenti da visualizzare</li>
+        @endforelse
+    </ul>
     </div>
 </body>
 </html>

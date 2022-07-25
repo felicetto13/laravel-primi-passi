@@ -14,7 +14,27 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+
+    $users = 
+    [
+        [
+            "username"=> "felix31",
+            "password"=> "HelloMoto!",
+            "role"=>"admin"
+        ],
+        [
+            "username"=> "danto55",
+            "password"=> "DipinTo@2",
+            "role"=>"user"
+        ],
+        [
+            "username"=> "felix31",
+            "password"=> "HelloMoto!",
+            "role"=>"tutor"
+        ],
+    ];
+
+    return view('home',["users"=>$users]);
 })->name("home");
 
 
